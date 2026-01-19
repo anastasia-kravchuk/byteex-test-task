@@ -1,4 +1,4 @@
-import type { ContentfulAsset } from './types';
+import type { ContentfulAsset } from '../types/contentfulTypes';
 
 export function mapAssets(assets: ContentfulAsset[] = []) {
   return assets.reduce<Record<string, ContentfulAsset['fields']>>(
