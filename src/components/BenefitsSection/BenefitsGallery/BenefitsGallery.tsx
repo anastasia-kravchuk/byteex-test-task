@@ -19,7 +19,7 @@ export function BenefitsGallery() {
           className="benefits-gallery__arrow benefits-gallery__arrow--left"
           aria-hidden
         >
-          <img src={arrowLeft} alt="Previous slide" />
+          <img src={arrowLeft} alt="Previous slide" className="benefits-gallery__arrow-image" />
         </button>
 
         <figure className="benefits-gallery__figure">

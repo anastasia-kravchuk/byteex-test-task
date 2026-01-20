@@ -7,7 +7,7 @@
   &__media {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 17px;
   }
 
   &__figure {
@@ -27,15 +27,14 @@
   &__caption {
     margin-top: 10px;
     font-size: 13px;
-    line-height: 18px;
+    line-height: 22px;
+    letter-spacing: 3%;
     color: vars.$main-text-color;
   }
 
-  &__arrow {
-    background: none;
-    border: none;
-    font-size: 24px;
-    color: vars.$main-text-color;
+  &__arrow-image {
+    height: 14px;
+    width: 7px;
   }
 
   &__thumbnails {
@@ -69,6 +68,10 @@
 
 @media (min-width: 1464px) {
   .benefits-gallery {
+    &__media {
+      gap: 19px;
+    }
+
     &__image {
       width: 433px;
       height: 648px;
@@ -79,8 +82,9 @@
       height: 32px;
     }
 
-    &__arrow {
-      font-size: 32px;
+    &__arrow-image {
+      height: 20px;
+      width: 10px;
     }
   }
 }
