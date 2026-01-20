@@ -1,5 +1,6 @@
 import { useBenefitItems } from "../../hooks/useBenefitItem";
 import { useBenefitsSection } from "../../hooks/useBenefitsSection";
+import { BenefitsGallery } from "./BenefitsGallery/BenefitsGallery";
 import "./BenefitsSection.scss";
 
 export function BenefitsSection() {
@@ -9,7 +10,7 @@ export function BenefitsSection() {
   return (
     <section className="benefits">
       <h2 className="benefits__title">{section?.sectionTitle}</h2>
-
+      <BenefitsGallery />
       <ul className="benefits__list">
         {items.map((item, index) => (
           <li key={index} className="benefits__item">
