@@ -1,12 +1,11 @@
-import './Hero.scss';
+import "./Hero.scss";
 import { useHero } from "../../hooks/useHero";
 import logo from "../../assets/logo.svg";
+import iconComfort from "../../assets/icons/icon-comfort.svg";
+import iconRecycle from "../../assets/icons/icon-recycle.svg";
+import iconFabric from "../../assets/icons/icon-fabric.svg";
 
-const ICON_CLASSES = [
-  "hero__bullet-icon--comfort",
-  "hero__bullet-icon--recycle",
-  "hero__bullet-icon--fabric",
-];
+const ICONS = [iconComfort, iconRecycle, iconFabric];
 
 export function Hero() {
   const { hero, loading, error } = useHero();
@@ -39,12 +38,16 @@ export function Hero() {
           <div className="hero__content">
             <div className="hero__images">
               {hero.images.map((image, index) => (
-                <img
+                <div
                   key={index}
-                  src={image.url}
-                  alt={image.alt}
-                  className="hero__image"
-                />
+                  className={`hero__image-wrapper hero__image-wrapper--${index}`}
+                >
+                  <img
+                    src={image.url}
+                    alt={image.alt}
+                    className="hero__image"
+                  />
+                </div>
               ))}
             </div>
 
@@ -52,10 +55,9 @@ export function Hero() {
               <ul className="hero__bullet-list">
                 {hero.bulletPoints.map((point, index) => (
                   <li key={index} className="hero__bullet-item">
-                    <span
-                      className={`hero__bullet-icon${ICON_CLASSES[index]}`}
-                      aria-hidden
-                    />
+                    <span className="hero__bullet-icon" aria-hidden>
+                      <img src={ICONS[index]} alt="" />
+                    </span>
                     <span className="hero__bullet-text">{point}</span>
                   </li>
                 ))}
