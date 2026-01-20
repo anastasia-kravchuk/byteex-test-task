@@ -33,16 +33,15 @@
   }
 
   &__item-title {
-    margin-bottom: 20px;
     font-size: 20px;
     line-height: 24px;
     letter-spacing: 4%;
     text-align: center;
     color: vars.$accent-color;
+    margin-bottom: 20px;
   }
 
   &__item-text {
-    margin-bottom: 6px;
     text-align: center;
     font-size: 14px;
     line-height: 18px;
@@ -72,6 +71,7 @@
       align-items: flex-start;
       max-width: 571px;
       margin: 0 auto;
+      gap: 0;
     }
 
     &__item {
@@ -92,6 +92,8 @@
 
     &__item-title {
       text-align: left;
+      padding-top: 12px;
+      margin-bottom: 0;
     }
 
     &__item-text {
@@ -99,6 +101,9 @@
       width: auto;
       height: auto;
       max-width: 497px;
+
+      font-size: 15px;
+      line-height: 23px;
     }
 
     &__item-separator {
