@@ -9,7 +9,7 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-    color: vars.$secondary-text-color;
+    color: vars.$main-text-color;
     font-size: 11px;
     &--desktop {
       display: none;
@@ -138,7 +138,7 @@
   &__bullet-text {
     max-width: 425px;
     font-size: 13px;
-    color: vars.$secondary-text-color;
+    color: vars.$main-text-color;
     line-height: 18px;
     letter-spacing: 3%;
   }
@@ -150,7 +150,7 @@
     gap: 10px;
     width: 369px;
     height: 56px;
-    margin: 0 auto;
+    margin: 0 auto 31px;
     border-radius: 5px;
     background-color: vars.$accent-color;
     color: #ffffff;

@@ -18,3 +18,22 @@ export interface HeroData {
   buttonText: string;
   images: HeroImage[];
 }
+export interface ReviewFields {
+  authorName: string;
+  rating: number;
+  text: string;
+  authorImage?: {
+    sys: {
+      id: string;
+    };
+  };
+}
+export interface ReviewData {
+  authorName: string;
+  rating: number;
+  text: string;
+  authorImage?: {
+    url: string;
+    alt: string;
+  };
+}
