@@ -3,6 +3,7 @@ import { Hero } from "./components/Hero/Hero";
 import { HeroReview } from "./components/HeroReview/HeroReview";
 import "./App.scss";
 import { FounderSection } from "./components/FounderSection/FounderSection";
+import { HowItWorksCards } from "./components/HowItWorksCards/HowItWorksCards";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       </div>
       <BenefitsSection />
       <FounderSection />
+      <HowItWorksCards />
     </>
   );
 }
