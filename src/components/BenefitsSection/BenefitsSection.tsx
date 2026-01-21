@@ -10,15 +10,12 @@ export function BenefitsSection() {
   const { items } = useBenefitItems();
 
   return (
-     <section className="benefits">
+    <section className="benefits">
       <div className="benefits__companies-logos">
         <p className="benefits__text">as seen in</p>
 
         <picture className="benefits__logos">
-          <source
-            media="(min-width:1464px)"
-            srcSet={companiesLogosDesktop}
-          />
+          <source media="(min-width:1464px)" srcSet={companiesLogosDesktop} />
           <img src={companiesLogos} alt="Companies logos" />
         </picture>
 
@@ -31,9 +28,7 @@ export function BenefitsSection() {
 
       <div className="benefits__content-wrapper">
         <div className="benefits__title-wrapper">
-          <h2 className="benefits__title">
-            {section?.sectionTitle}
-          </h2>
+          <h2 className="benefits__title">{section?.sectionTitle}</h2>
         </div>
 
         <div className="benefits__gallery-wrapper">
@@ -51,18 +46,30 @@ export function BenefitsSection() {
                 />
 
                 <div className="benefits__content">
-                  <h3 className="benefits__item-title">
-                    {item.title}
-                  </h3>
-                  <p className="benefits__item-text">
-                    {item.description}
-                  </p>
+                  <h3 className="benefits__item-title">{item.title}</h3>
+                  <p className="benefits__item-text">{item.description}</p>
                 </div>
 
                 <hr className="benefits__item-separator" />
               </li>
             ))}
           </ul>
+        </div>
+
+        <div className="benefits__button-wrapper">
+          <button className="benefits__button">
+            <p>Customize Your Outfit</p>
+            <span className="benefits__button-arrow">→</span>
+          </button>
+
+          <div className="benefits__review">
+            <span className="review__stars" aria-hidden>
+              {"★".repeat(5)}
+            </span>
+            <span className="review__rating-text">
+              One of 500+ 5 Star Reviews Online
+            </span>
+          </div>
         </div>
       </div>
     </section>

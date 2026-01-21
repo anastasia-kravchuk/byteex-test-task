@@ -2,6 +2,7 @@ import { BenefitsSection } from "./components/BenefitsSection/BenefitsSection";
 import { Hero } from "./components/Hero/Hero";
 import { HeroReview } from "./components/HeroReview/HeroReview";
 import "./App.scss";
+import { FounderSection } from "./components/FounderSection/FounderSection";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <HeroReview />
       </div>
       <BenefitsSection />
+      <FounderSection />
     </>
   );
 }
