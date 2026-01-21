@@ -6,6 +6,7 @@
   height: 132px;
   box-shadow: vars.$box-shadow;
   border-radius: 8px;
+  background-color: vars.$bg-color;
   &__card {
     display: flex;
     flex-direction: column;

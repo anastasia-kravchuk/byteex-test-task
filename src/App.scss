@@ -1,0 +1,15 @@
+.hero-review-wrapper {
+  position: relative;
+  z-index: 10;
+  max-width: 388px;
+  margin: 0 auto;
+  margin-top: -66px;
+  margin-bottom: -66px;
+}
+
+@media (min-width: 1464px) {
+  .hero-review-wrapper {
+    max-width: none;
+    margin-left: 100px;
+  }
+}
