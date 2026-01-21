@@ -1,0 +1,58 @@
+@use "../../styles/variables.scss" as vars;
+
+.order-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 57px 24px 59px;
+
+  &__title {
+    font-size: 26px;
+    line-height: 40px;
+    letter-spacing: 4%;
+    text-align: center;
+    color: vars.$accent-color;
+    margin-bottom: 23px;
+  }
+
+  &__button-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 41px;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 369px;
+    height: 56px;
+    margin: 0 auto 11px;
+    border-radius: 5px;
+    background-color: vars.$accent-color;
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 3%;
+    text-align: center;
+  }
+}
+@media (min-width: 1200px) {
+  .order-section {
+    padding: 75px 0 74px;
+    &__title {
+      font-size: 32px;
+      margin-bottom: 46px;
+    }
+
+    &__button-wrapper {
+      margin-top: 56px;
+    }
+    &__button {
+      width: 381px;
+    }
+  }
+}

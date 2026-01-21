@@ -15,7 +15,7 @@ export function BenefitsSection() {
         <p className="benefits__text">as seen in</p>
 
         <picture className="benefits__logos">
-          <source media="(min-width:1464px)" srcSet={companiesLogosDesktop} />
+          <source media="(min-width:1200px)" srcSet={companiesLogosDesktop} />
           <img src={companiesLogos} alt="Companies logos" />
         </picture>
 

@@ -171,7 +171,7 @@
   }
 }
 
-@media (min-width: 1464px) {
+@media (min-width: 1200px) {
   .benefits {
     padding-top: 77px;
 
@@ -199,8 +199,6 @@
       grid-template-areas:
         "title gallery"
         "list  gallery";
-      column-gap: 80px;
-      row-gap: 0;
       align-items: start;
     }
 

@@ -4,6 +4,7 @@ import logo from "../../assets/logo.svg";
 import iconComfort from "../../assets/icons/icon-comfort.svg";
 import iconRecycle from "../../assets/icons/icon-recycle.svg";
 import iconFabric from "../../assets/icons/icon-fabric.svg";
+import { HeroReview } from "../HeroReview/HeroReview";
 
 const ICONS = [iconComfort, iconRecycle, iconFabric];
 
@@ -67,6 +68,10 @@ export function Hero() {
                 {hero.buttonText}
                 <span className="hero__cta-arrow">→</span>
               </button>
+
+              <div className="hero__review-floating">
+                <HeroReview />
+              </div>
             </div>
           </div>
         </div>

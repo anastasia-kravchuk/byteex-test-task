@@ -22,7 +22,10 @@
 }
 
 .hero {
-  padding-bottom: 86px;
+  padding-bottom: 20px;
+  position: relative;
+  z-index: 5;
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -118,6 +121,7 @@
   }
 
   &__text {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -151,13 +155,24 @@
     gap: 10px;
     width: 369px;
     height: 56px;
-    margin: 0 auto 31px;
+    margin: 0 auto;
     border-radius: 5px;
     background-color: vars.$accent-color;
     color: #ffffff;
     font-size: 18px;
     letter-spacing: 3%;
     text-align: center;
+  }
+
+  &__review-floating {
+    display: flex;
+    justify-content: center;
+    margin-top: 31px;
+    z-index: 10;
+    width: 100%;
+    max-width: 388px;
+    position: relative;
+    margin-bottom: -76px;
   }
 }
 
@@ -172,7 +187,7 @@
   flex-shrink: 0;
 }
 
-@media (min-width: 1464px) {
+@media (min-width: 1200px) {
   .hero-header {
     &__text--desktop {
       display: flex;
@@ -184,19 +199,26 @@
   }
 
   .hero {
+    &__review-floating {
+      margin-top: 46px;
+      transform: translateY(0);
+    }
+
     &__container {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      column-gap: 40px;
+      max-width: 1440px;
       margin: 0 auto;
-      padding: 0 96px;
+      padding: 0 60px;
     }
 
     &__content {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
+      display: contents;
     }
 
     &__branding {
-      align-items: flex-start;
+      grid-column: 1;
       margin-top: 33px;
     }
 
@@ -214,15 +236,20 @@
     }
 
     &__text {
-      align-items: flex-start;
+      max-width: 420px;
+      grid-column: 1;
       order: 1;
+      align-items: flex-start;
     }
 
     &__images {
+      grid-column: 2;
+      grid-row: 1 / 3;
       order: 2;
-      width: 725px;
-      height: 442px;
-      margin-top: -137px;
+      width: 600px;
+      height: 380px;
+      margin-top: 137px;
+      position: relative;
 
       &::before,
       &::after {
@@ -238,6 +265,12 @@
       &::after {
         left: 50%;
         transform: translateX(245px);
+      }
+    }
+    @media (min-width: 1400px) {
+      &__images {
+        width: 725px;
+        height: 442px;
       }
     }
     &__image-wrapper {
