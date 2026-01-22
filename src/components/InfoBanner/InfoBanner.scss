@@ -1,0 +1,97 @@
+@use "../../styles/variables.scss" as vars;
+
+.info-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 38px;
+  padding: 52px 0 56px;
+  background-color: vars.$secondary-bg-color;
+
+  &__title {
+    font-size: 25px;
+    line-height: 40px;
+    letter-spacing: 4%;
+    text-align: center;
+    color: vars.$accent-color-light;
+  }
+  &__impact-metrics {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+  }
+  &__metric {
+    display: flex;
+    flex-direction: column;
+    min-width: 282px;
+
+    &--0,
+    &--1 {
+      border-bottom: 1px solid vars.$grey-border-color;
+      width: 100%;
+    }
+    &--2 {
+      display: none;
+    }
+  }
+
+  &__metric-image {
+    margin: 0 auto;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 13px;
+  }
+  &__metric-value {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 20px;
+    letter-spacing: 2%;
+    text-align: center;
+    color: vars.$accent-color-light;
+    margin-bottom: 6px;
+  }
+
+  &__metric-description {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 3%;
+    text-align: center;
+    color: vars.$accent-color-light;
+    padding-bottom: 16px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .info-banner {
+    gap: 26px;
+    padding: 39px 0 42px;
+    &__title {
+      font-size: 32px;
+      color: vars.$accent-color;
+    }
+    &__impact-metrics {
+      flex-direction: row;
+      min-height: 122px;
+    }
+    &__metric {
+      &--0,
+      &--1 {
+        border-bottom: none;
+        border-right: 1px solid vars.$grey-border-color;
+        width: 100%;
+      }
+
+      &--2 {
+        display: flex;
+      }
+    }
+    &__metric-value {
+      color: vars.$accent-color;
+    }
+    &__metric-description {
+      color: vars.$accent-color;
+      padding-bottom: 0;
+    }
+  }
+}

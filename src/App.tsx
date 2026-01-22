@@ -4,6 +4,7 @@ import { FounderSection } from "./components/FounderSection/FounderSection";
 import { OrderSection } from "./components/OrderSection/OrderSection";
 import { ReviewsSection } from "./components/ReviewsSection/ReviewsSection";
 import { FAQSection } from "./components/FAQSection/FAQSection";
+import { InfoBunner } from "./components/InfoBanner/InfoBanner";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <OrderSection />
       <ReviewsSection />
       <FAQSection />
+      <InfoBunner />
     </>
   );
 }
