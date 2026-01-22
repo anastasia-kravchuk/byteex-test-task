@@ -12,17 +12,22 @@ export function OrderSection() {
     <section className="order-section">
       <h2 className="order-section__title">{section.title}</h2>
 
-      <HowItWorksCards />
-      <div className="order-section__button-wrapper">
-        <button className="order-section__button">
+      <div className="order-section__cards">
+        <HowItWorksCards />
+      </div>
+
+      <div className="button-wrapper">
+        <button className="button">
           {section.buttonText}
-          <span className="order-section__button-arrow">→</span>
+          <span className="button__button-arrow">→</span>
         </button>
-        <div className="order-section__review">
-          <span className="review__stars" aria-hidden>
+        <div className="button-review">
+          <span className="button-review__stars" aria-hidden>
             {"★".repeat(section.ratingValue)}
           </span>
-          <span className="review__rating-text">{section.ratingText}</span>
+          <span className="button-review__rating-text">
+            {section.ratingText}
+          </span>
         </div>
       </div>
     </section>

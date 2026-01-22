@@ -1,0 +1,61 @@
+@use "../../../styles/variables.scss" as vars;
+
+.faq__list {
+}
+.faq__item {
+  border-bottom: 1px solid vars.$secondary-border-color;
+  max-width: 349px;
+}
+
+.faq__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 11px;
+}
+
+.faq__question {
+  width: 305px;
+  padding: 18px 0 10px;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 4%;
+  color: vars.$accent-color;
+}
+
+.faq__button {
+  font-size: 44px;
+  font-weight: 200;
+  line-height: 24px;
+  letter-spacing: 4%;
+  text-align: center;
+  color: vars.$accent-color;
+}
+.faq__answear--wrapper {
+  padding-bottom: 10px;
+}
+.faq__answear {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 3%;
+  color: vars.$main-text-color;
+}
+
+@media (min-width: 1200px) {
+  .faq__item {
+    width: 630px;
+    max-width: none;
+  }
+
+  .faq__question {
+    padding-top: 22px;
+  }
+
+  .faq__answear--wrapper {
+    padding-bottom: 24px;
+  }
+  .faq__answear {
+    font-size: 15px;
+    line-height: 22px;
+  }
+}

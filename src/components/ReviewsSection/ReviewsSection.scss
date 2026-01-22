@@ -51,28 +51,6 @@
     height: 100%;
     object-fit: cover;
   }
-
-  &__button-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  &__button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    width: 369px;
-    height: 56px;
-    margin-bottom: 11px;
-    border-radius: 5px;
-    background-color: vars.$accent-color;
-    color: #ffffff;
-    font-size: 18px;
-    letter-spacing: 3%;
-    text-align: center;
-  }
 }
 
 .seen-dots--review {
@@ -88,18 +66,12 @@
     &__title {
       font-size: 32px;
     }
-    &__description {
-    }
     &__ugs {
       li {
         &:nth-child(n + 9) {
           display: block;
         }
       }
-    }
-    &__button-wrapper {
-    }
-    &__button {
     }
   }
 }

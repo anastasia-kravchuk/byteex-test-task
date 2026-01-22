@@ -1,0 +1,98 @@
+@use "../../styles/variables.scss" as vars;
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 52px;
+  &__text-content {
+    margin-bottom: 39px;
+  }
+  &__title {
+    height: 87px;
+    max-width: 318px;
+    margin: 0 auto;
+    font-size: 26px;
+    line-height: 30px;
+    letter-spacing: 4%;
+    text-align: center;
+    color: vars.$accent-color;
+
+    margin-bottom: 8px;
+  }
+  &__title-separator {
+    color: vars.$secondary-bg-color;
+    height: 1px;
+    opacity: 0.2;
+  }
+
+  &__gallery {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .faq {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 118px;
+
+    gap: 127px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &__text-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      flex: 0 0 630px;
+      width: 100%;
+    }
+
+    &__title {
+      margin: 0 0 8px;
+      height: 87px;
+      text-align: left;
+      max-width: 592px;
+    }
+    &__title-separator {
+      width: 100%;
+    }
+
+    &__gallery {
+      padding-left: 88px;
+      position: relative;
+      margin: 100px 0;
+      display: block;
+    }
+    &__image {
+      position: absolute;
+      object-fit: cover;
+      &--0 {
+        width: 167px;
+        height: 253px;
+        object-fit: cover;
+        top: -145px;
+        right: -80px;
+      }
+
+      &--1 {
+        position: relative;
+        display: block;
+        width: 227px;
+        height: 355px;
+        object-fit: cover;
+        z-index: 1;
+      }
+
+      &--2 {
+        width: 216px;
+        height: 159px;
+        bottom: -120px;
+        left: 0px;
+      }
+    }
+  }
+}
