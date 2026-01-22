@@ -19,10 +19,10 @@ export function BenefitsSection() {
           <img src={companiesLogos} alt="Companies logos" />
         </picture>
 
-        <div className="benefits__seen-dots" aria-hidden>
-          <span className="benefits__seen-dot" />
-          <span className="benefits__seen-dot benefits__seen-dot--active" />
-          <span className="benefits__seen-dot" />
+        <div className="seen-dots" aria-hidden>
+          <span className="seen-dot" />
+          <span className="seen-dot seen-dot--active" />
+          <span className="seen-dot" />
         </div>
       </div>
 

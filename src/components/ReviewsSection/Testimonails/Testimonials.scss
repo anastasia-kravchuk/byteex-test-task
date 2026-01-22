@@ -1,0 +1,101 @@
+@use "/src/styles/variables.scss" as vars;
+
+.testimonial {
+  margin: 37px 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5px;
+    padding: 26px 33px 29px;
+    width: 299px;
+    background-color: vars.$bg-color;
+    border: 1px solid vars.$secondary-border-color;
+    border-radius: 8px;
+    box-shadow: vars.$box-shadow;
+
+    &--0,
+    &--2 {
+      display: none;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  &__avatar {
+    width: 34px;
+    height: 35px;
+    border-radius: 50%;
+    margin: 0;
+  }
+  &__meta {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  &__stars {
+    color: vars.$star-color;
+  }
+  &__author-name {
+    font-size: 15px;
+    line-height: 23px;
+    letter-spacing: 3%;
+    color: vars.$main-text-color;
+  }
+  &__text {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 4%;
+    color: vars.$main-text-color;
+  }
+
+  &__arrow {
+    width: 7px;
+    height: 14px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .testimonial {
+    margin: 76px 0 63px;
+    gap: 70px;
+
+    &__card-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 42px;
+    }
+
+    &__card {
+      &--0,
+      &--2 {
+        display: flex;
+      }
+    }
+
+    &__avatar {
+      width: 39px;
+      height: 40px;
+    }
+
+    &__text {
+      line-height: 23px;
+    }
+
+    &__arrow {
+      width: 10px;
+      height: 20px;
+    }
+  }
+}

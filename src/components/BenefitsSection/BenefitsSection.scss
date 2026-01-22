@@ -48,24 +48,6 @@
     max-width: 394px;
   }
 
-  &__seen-dots {
-    display: flex;
-    gap: 7px;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &__seen-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: vars.$separator-color;
-  }
-
-  &__seen-dot--active {
-    background-color: #000000;
-  }
-
   &__content-wrapper {
     display: flex;
     flex-direction: column;
@@ -171,13 +153,31 @@
   }
 }
 
+.seen-dots {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  justify-content: center;
+}
+
+.seen-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: vars.$separator-color;
+}
+
+.seen-dot--active {
+  background-color: #000000;
+}
+
 @media (min-width: 1200px) {
+  .seen-dots {
+    display: none;
+  }
+
   .benefits {
     padding-top: 77px;
-
-    &__seen-dots {
-      display: none;
-    }
 
     &__companies-logos {
       margin-bottom: 110px;
