@@ -17,9 +17,13 @@ export function BenefitsGallery() {
       <div className="benefits-gallery__media">
         <button
           className="benefits-gallery__arrow benefits-gallery__arrow--left"
-          aria-hidden
+          aria-label="Slide left"
         >
-          <img src={arrowLeft} alt="Previous slide" className="benefits-gallery__arrow-image" />
+          <img
+            src={arrowLeft}
+            alt="Previous slide"
+            className="benefits-gallery__arrow-image"
+          />
         </button>
 
         <figure className="benefits-gallery__figure">
@@ -49,7 +53,7 @@ export function BenefitsGallery() {
 
         <button
           className="benefits-gallery__arrow benefits-gallery__arrow--right"
-          aria-hidden
+          aria-label="Slide right"
         >
           <img src={arrowRight} alt="Next slide" />
         </button>

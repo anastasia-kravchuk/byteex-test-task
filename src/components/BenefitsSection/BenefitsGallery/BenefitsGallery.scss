@@ -32,6 +32,9 @@
     color: vars.$main-text-color;
   }
 
+  &__arrow {
+    padding: 12px;
+  }
   &__arrow-image {
     height: 14px;
     width: 7px;

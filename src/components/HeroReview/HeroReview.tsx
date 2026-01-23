@@ -22,7 +22,7 @@ export function HeroReview() {
 
           <div className="review__meta">
             <div className="review__rating">
-              <span className="review__stars" aria-hidden>
+              <span className="review__stars">
                 {"★".repeat(review.rating)}
               </span>
               <span className="review__rating-text">

@@ -12,7 +12,7 @@ export function HowItWorksCards() {
 
   return (
     <div className="how-it-works">
-      <button className="arrow" aria-hidden>
+      <button className="arrow">
         <img src={arrowLeft} alt="Previous slide" className="arrow__left-icon" />
       </button>
       {steps.map((card, index) => (
@@ -29,7 +29,7 @@ export function HowItWorksCards() {
           <p className="how-it-works__description">{card.description}</p>
         </div>
       ))}
-      <button className="arrow" aria-hidden>
+      <button className="arrow">
         <img src={arrowRight} alt="Next slide" className="arrow__right-icon" />
       </button>
     </div>

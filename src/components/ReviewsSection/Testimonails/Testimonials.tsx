@@ -11,7 +11,7 @@ export function Testimonials() {
   }
   return (
     <div className="testimonial">
-      <button>
+      <button className="testimonial__nav-btn" type="button">
         <img
           src={arrowLeft}
           alt="Previous page"
@@ -47,7 +47,7 @@ export function Testimonials() {
         ))}
       </div>
 
-      <button>
+      <button className="testimonial__nav-btn">
         <img
           src={arrowRight}
           alt="Next page"

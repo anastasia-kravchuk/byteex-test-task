@@ -31,7 +31,7 @@ export function ReviewsSection() {
       </ul>
       <Testimonials />
 
-      <div className="seen-dots seen-dots--review" aria-hidden>
+      <div className="seen-dots seen-dots--review">
         <span className="seen-dot seen-dot--active" />
         <span className="seen-dot" />
         <span className="seen-dot" />

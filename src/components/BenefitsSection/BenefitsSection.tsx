@@ -19,7 +19,7 @@ export function BenefitsSection() {
           <img src={companiesLogos} alt="Companies logos" />
         </picture>
 
-        <div className="seen-dots" aria-hidden>
+        <div className="seen-dots">
           <span className="seen-dot" />
           <span className="seen-dot seen-dot--active" />
           <span className="seen-dot" />
@@ -63,7 +63,7 @@ export function BenefitsSection() {
           </button>
 
           <div className="benefits__review">
-            <span className="review__stars" aria-hidden>
+            <span className="review__stars">
               {"★".repeat(5)}
             </span>
             <span className="review__rating-text">

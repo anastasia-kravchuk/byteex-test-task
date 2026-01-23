@@ -52,9 +52,14 @@
     color: vars.$main-text-color;
   }
 
-  .arrow__left-icon, .arrow__right-icon {
+  .arrow__left-icon,
+  .arrow__right-icon {
     width: 7px;
     height: 14px;
+  }
+
+  .arrow {
+    padding: 12px;
   }
 }
 
@@ -76,14 +81,6 @@
       &--1 {
         display: flex;
       }
-    }
-    &__icon {
-    }
-
-    &__title {
-    }
-
-    &__description {
     }
   }
 }
