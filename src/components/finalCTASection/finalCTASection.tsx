@@ -29,7 +29,12 @@ export function FinalCTASection() {
             key={index}
             className={`final-cta__gallery-wrapper final-cta__gallery-wrapper--${index}`}
           >
-            <img src={img.url} alt={img.alt} className="final-cta__image" />
+            <img
+              src={img.url}
+              alt={img.alt}
+              className="final-cta__image"
+              loading="lazy"
+            />
           </div>
         ))}
       </div>

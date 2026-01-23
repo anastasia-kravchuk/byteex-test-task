@@ -26,13 +26,16 @@ export function FAQSection() {
           <span className="button-review__stars" aria-hidden>
             {"★".repeat(section.ratingValue)}
           </span>
-          <span className="button-review__rating-text">{section.ratingText}</span>
+          <span className="button-review__rating-text">
+            {section.ratingText}
+          </span>
         </div>
       </div>
 
       <div className="faq__gallery">
         {section.images.map((image, index) => (
           <img
+            loading="lazy"
             key={index}
             src={image.url}
             alt={image.alt}

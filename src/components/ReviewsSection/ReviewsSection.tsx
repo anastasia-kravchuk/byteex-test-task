@@ -22,6 +22,7 @@ export function ReviewsSection() {
         {images.map((img, index) => (
           <li key={index}>
             <img
+              loading="lazy"
               src={img.url}
               alt={img.alt}
               className="reviews-section__ugs-img"
@@ -46,7 +47,9 @@ export function ReviewsSection() {
           <span className="button-review__stars" aria-hidden>
             {"★".repeat(section.ratingValue)}
           </span>
-          <span className="button-review__rating-text">{section.ratingText}</span>
+          <span className="button-review__rating-text">
+            {section.ratingText}
+          </span>
         </div>
       </div>
     </section>

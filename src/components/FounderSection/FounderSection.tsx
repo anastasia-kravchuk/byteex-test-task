@@ -14,6 +14,7 @@ export function FounderSection() {
         <h2 className="founder__title">{section.sectionTitle}</h2>
         <div className="founder__gallery">
           <img
+            loading="lazy"
             src={section.mainImage.url}
             alt={section.mainImage.alt}
             className="founder__main-image"
@@ -21,6 +22,7 @@ export function FounderSection() {
           <div className="funder__secondary-images">
             {section.secondaryImages.map((image, index) => (
               <img
+                loading="lazy"
                 src={image.url}
                 alt={image.alt}
                 key={index}

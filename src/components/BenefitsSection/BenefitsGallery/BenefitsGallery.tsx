@@ -28,6 +28,7 @@ export function BenefitsGallery() {
 
         <figure className="benefits-gallery__figure">
           <img
+            loading="lazy"
             src={activeSlide.image?.url}
             alt={activeSlide.image?.alt}
             className="benefits-gallery__image"
@@ -41,7 +42,11 @@ export function BenefitsGallery() {
                   index === 6 ? "is-active" : ""
                 }`}
               >
-                <img src={slide.image?.url} alt="" />
+                <img
+                  src={slide.image?.url}
+                  alt={slide.image?.alt}
+                  loading="lazy"
+                />
               </li>
             ))}
           </ul>
