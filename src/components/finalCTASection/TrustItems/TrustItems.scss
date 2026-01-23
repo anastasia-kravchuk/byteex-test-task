@@ -1,0 +1,40 @@
+@use "../../../styles/variables.scss" as vars;
+
+.trust {
+  display: none;
+  margin-top: 23px;
+}
+
+@media (min-width: 1200px) {
+  .trust {
+    display: flex;
+    &__item {
+      display: flex;
+      gap: 12px;
+
+      &--0, &--1 {
+        &::after {
+          content: '';
+          width: 1px;
+          height: 51px;
+          background-color: vars.$secondary-grey-color;
+        }
+      }
+    }
+
+    &__item-image {
+      width: 33px;
+      height: 33px;
+      flex-shrink: 0;
+      margin-left: 23px;
+    }
+
+    &__item-text {
+      width: 120px;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 3%;
+      color: vars.$main-text-color;
+    }
+  }
+}

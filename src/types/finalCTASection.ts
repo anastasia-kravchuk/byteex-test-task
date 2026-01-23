@@ -18,3 +18,18 @@ export interface FinalCTASectionData {
     alt: string;
   }[];
 }
+export interface TrustItemFields {
+  icon: {
+    sys: {
+      id: string;
+    };
+  };
+  text: string;
+}
+export interface TrustItemData {
+  icon: {
+    url: string;
+    alt: string;
+  };
+  text: string;
+}

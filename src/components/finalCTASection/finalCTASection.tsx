@@ -1,7 +1,8 @@
 import { useFinalCTASection } from "../../hooks/useFinalCTASection";
 import "./finalCTASection.scss";
 import clock from "../../assets/icons/clock-icon.svg";
-import creditCards from "../../assets/credit-cards.png";
+import creditCards from "../../assets/credit-cards.svg";
+import { TrustItems } from "./TrustItems/TrustItems";
 
 export function FinalCTASection() {
   const { section, loading, error } = useFinalCTASection();
@@ -39,29 +40,31 @@ export function FinalCTASection() {
             {section.buttonText}
             <span className="button__button-arrow">→</span>
           </button>
-          <div className="button-review button-review--mobile">
-            <span className="button-review__stars" aria-hidden>
-              {"★".repeat(5)}
-            </span>
-            <span className="button-review__rating-text">
-              Over 500+ 5 Star Reviews Online
-            </span>
-          </div>
-          <div className="final-cta__payment final-cta__payment--desktop">
-            <div className="final-cta__shipping">
-              <img src={clock} alt="Clock icon" className="final-cta__clock" />
-              <p className="final-cta__shipping-text">Ships in 1-2 Days</p>
-            </div>
-            <div className="final-cta__credit-cards">
-              <img
-                src={creditCards}
-                alt="Credit cards"
-                className="final-cta__credit-cards-image"
-              />
-            </div>
-          </div>
         </div>
       </button>
+
+      <div className="button-review button-review--mobile">
+        <span className="button-review__stars" aria-hidden>
+          {"★".repeat(5)}
+        </span>
+        <span className="button-review__rating-text">
+          Over 500+ 5 Star Reviews Online
+        </span>
+      </div>
+      <div className="final-cta__payment final-cta__payment--desktop">
+        <div className="final-cta__shipping">
+          <img src={clock} alt="Clock icon" className="final-cta__clock" />
+          <p className="final-cta__shipping-text">Ships in 1-2 Days</p>
+        </div>
+        <div className="final-cta__credit-cards">
+          <img
+            src={creditCards}
+            alt="Credit cards"
+            className="final-cta__credit-cards-image"
+          />
+        </div>
+      </div>
+      <TrustItems />
     </section>
   );
 }

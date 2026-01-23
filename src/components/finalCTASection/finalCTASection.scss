@@ -220,6 +220,13 @@
       display: flex;
       justify-content: center;
       gap: 4px;
+      &::after {
+        content: "";
+        margin-left: 9px;
+        height: 17px;
+        width: 2px;
+        background-color: vars.$secondary-grey-color;
+      }
     }
 
     &__clock {
@@ -236,7 +243,7 @@
     }
 
     &__credit-cards-image {
-      width: 243px;
+      width: 243px;  
       height: 22px;
     }
   }
