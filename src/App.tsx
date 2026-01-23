@@ -5,6 +5,7 @@ import { OrderSection } from "./components/OrderSection/OrderSection";
 import { ReviewsSection } from "./components/ReviewsSection/ReviewsSection";
 import { FAQSection } from "./components/FAQSection/FAQSection";
 import { InfoBunner } from "./components/InfoBanner/InfoBanner";
+import { FinalCTASection } from "./components/finalCTASection/finalCTASection";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <ReviewsSection />
       <FAQSection />
       <InfoBunner />
+      <FinalCTASection />
     </>
   );
 }

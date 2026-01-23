@@ -1,0 +1,247 @@
+@use "../../styles/variables.scss" as vars;
+.final-cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 52px 0 52px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(
+      0deg,
+      #f9f0e5 0%,
+      rgba(249, 240, 229, 0.18) 43.05%,
+      rgba(249, 240, 229, 0) 100%
+    );
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    font-size: 26px;
+    line-height: 40px;
+    letter-spacing: 4%;
+    text-align: center;
+    color: vars.$accent-color;
+  }
+
+  &__description {
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 3%;
+    text-align: center;
+    color: vars.$main-text-color;
+
+    &--desktop {
+      display: none;
+    }
+  }
+
+  &__gallery {
+    position: relative;
+    width: 380px;
+    height: 221px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 70px;
+      height: 99px;
+      background: linear-gradient(180deg, #f9f0e5 0%, #f9f0e54f 31%);
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      top: 130px;
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+  }
+
+  &__gallery-wrapper {
+    position: absolute;
+    overflow: hidden;
+    margin: 0 auto;
+
+    &--0 {
+      width: 109px;
+      height: 165px;
+      left: 50%;
+      top: 40px;
+      transform: translateX(-150px);
+      z-index: 2;
+    }
+
+    &--1 {
+      width: 136px;
+      height: 221px;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      z-index: 3;
+    }
+
+    &--2 {
+      width: 109px;
+      height: 165px;
+      left: 50%;
+      top: 40px;
+      transform: translateX(40px);
+      z-index: 2;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__button-wrapper {
+    margin: 52px 0 0;
+  }
+  &__payment {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .final-cta {
+    position: relative;
+    overflow: hidden;
+    padding: 84px 0 84px;
+
+    &__header {
+      gap: 20px;
+      margin-bottom: 53px;
+    }
+    &__title {
+      font-size: 32px;
+    }
+    &__description {
+      &--mobile {
+        display: none;
+      }
+
+      &--desktop {
+        display: flex;
+        max-width: 587px;
+      }
+    }
+    &__gallery {
+      width: 600px;
+      height: 380px;
+      margin-bottom: 63px;
+      position: relative;
+
+      &::before,
+      &::after {
+        width: 134px;
+        height: 189px;
+        top: 120px;
+      }
+
+      &::before {
+        left: 50%;
+        transform: translateX(-380px);
+      }
+
+      &::after {
+        left: 50%;
+        transform: translateX(245px);
+      }
+      &__button-wrapper {
+        margin-bottom: 6px;
+      }
+    }
+
+    @media (min-width: 1400px) {
+      &__images {
+        width: 725px;
+        height: 442px;
+      }
+    }
+
+    &__gallery-wrapper {
+      &--0 {
+        width: 209px;
+        height: 316px;
+        transform: translateX(-315px);
+        top: 40px;
+      }
+      &--1 {
+        width: 260px;
+        height: 442px;
+      }
+      &--2 {
+        width: 209px;
+        height: 316px;
+        transform: translateX(105px);
+        top: 40px;
+      }
+    }
+
+    &__button-wrapper {
+      margin: 58px 0 0;
+    }
+
+    &__payment {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 9px;
+    }
+
+    &__shipping {
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+    }
+
+    &__clock {
+      width: 11px;
+      height: 11px;
+      margin-top: 2px;
+    }
+
+    &__shipping-text {
+      font-size: 10px;
+      line-height: 17px;
+      letter-spacing: 4%;
+      color: vars.$accent-green-color;
+    }
+
+    &__credit-cards-image {
+      width: 243px;
+      height: 22px;
+    }
+  }
+
+  .button-review--mobile {
+    display: none;
+  }
+}
