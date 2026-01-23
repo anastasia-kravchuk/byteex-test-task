@@ -66,6 +66,29 @@
       position: relative;
       margin: 100px 0;
       display: block;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 149px;
+        height: 187px;
+        background: linear-gradient(
+          0deg,
+          rgba(249, 240, 229, 0.7) 0%,
+          rgba(249, 240, 229, 0.217) 100%
+        );
+
+        z-index: -1;
+      }
+      &::before {
+        top: -60px;
+        left: 30px;
+      }
+      &::after {
+        bottom: -60px;
+        right: -100px;
+      }
     }
     &__image {
       position: absolute;
